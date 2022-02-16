@@ -1,5 +1,5 @@
 
-import addProduct from './services/getProducts'/
+function addProduct (product) {
 
     return fetch("http://localhost:5000/api/products",
         {
