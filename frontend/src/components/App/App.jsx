@@ -2,19 +2,17 @@ import { Catalog } from '../Catalog/Catalog';
 import './App.css';
 import {useEffect, useState} from "react";
 
+
 function App() {
-
-
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        if (requiresUpdate) {
-           getProducts()
+        DataService.get()
                 .then(setProducts)
                 .then(_ => setRequiresUpdate(false));
-        }
-    }, [requiresUpdate])
+        
+    }, [])
 
 
     /**const addExperience = (product) => {
