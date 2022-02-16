@@ -15,14 +15,9 @@ function App() {
     }, [])
 
 
-    /**const addExperience = (product) => {
-        return fetch("http://localhost:8080/api/experiences",
-            {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(product)
-            }
-        ).then(_ => setRequiresUpdate(true))*/
+    const addProduct = (product) => {
+        postProduct(product)
+            .then(_ => setRequiresUpdate(true))
 
 
 
