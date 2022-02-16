@@ -1,7 +1,7 @@
 
-function addProduct (product) {
+function postProduct (product) {
 
-    return fetch("http://localhost:5000/api/products",
+    return fetch(apiUrl,
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
