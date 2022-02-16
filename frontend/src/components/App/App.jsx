@@ -2,30 +2,25 @@ import { Catalog } from '../Catalog/Catalog';
 import './App.css';
 import { useEffect, useState } from "react";
 import { getProducts } from '../../services/getProducts';
+import { getProductById } from '../../services/getProductById';
 
 
 function App() {
   /* const [requiresUpdate, setRequiresUpdate] = useState(true); */
   const [products, setProducts] = useState([]);
-  
+  const [product, setProduct] = useState();
+
+  const [idProduct, setIdProduct] = useState();
+
   useEffect(() => {
     getProducts()
       .then(data => setProducts(data));
   }, []);
 
-  /*   const fechear = async () => {
-      const response = await fetch('http://192.168.1.10:5000/api/products');
-      console.log(response)
-      const data = await response.json();
-      setProducts(data)
-    } */
-  /*     useEffect(() => {
-          DataService.get()
-                  .then(setProducts)
-                  .then(_ => setRequiresUpdate(false));
-          
-      }, [])
-   */
+  useEffect(() => {
+    getProductById(idProduct)
+      .then(data => setProduct(data))
+  }, [idProduct])
 
   /*     const addProduct = (product) => {
           postProduct(product)

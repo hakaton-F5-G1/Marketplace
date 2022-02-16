@@ -1,7 +1,7 @@
 import Global from "../Global/Global"
 
-function getProducts() {
-    return fetch(Global.getProdudcts)
+async function getProducts() {
+    return fetch(Global.getProducts)
             .then(r => r.json())
 }
 export { getProducts }
