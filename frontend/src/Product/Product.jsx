@@ -1,16 +1,18 @@
+import "./products.css"
+
 function Product({ product }) {
-    const{name, image, price} = product
+    const { name, image, price } = product
     return (
         <div className="product">
-            <div>
-                <img src={image} alt="producto" />
+            <div className="container-img">
+                <img className="img" src={image} alt="producto" />
             </div>
-            <div>
+            <span className="container-info">
                 <p>{name}</p>
                 <p>{price}</p>
-            </div>
+            </span>
         </div>
     )
 }
 
-export {Product}
+export { Product }
