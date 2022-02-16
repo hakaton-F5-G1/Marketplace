@@ -1,6 +1,7 @@
 import { Product } from "../../Product/Product"
 import "./catalog.css"
 
+
 function Catalog({products}) {
     return (
         <section className="catalog-container">
@@ -9,6 +10,7 @@ function Catalog({products}) {
             ))}        
       </section>
     
+
   )
 }
 

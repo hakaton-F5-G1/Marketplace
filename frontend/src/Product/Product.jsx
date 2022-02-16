@@ -8,8 +8,8 @@ function Product({ product }) {
                 <img className="img" src={image} alt="producto" />
             </div>
             <span className="container-info">
-                <p>{name}</p>
-                <p>{price}</p>
+                <p className="container-name">{name}</p>
+                <p className="container-info--price">{price}</p>
             </span>
         </div>
     )
