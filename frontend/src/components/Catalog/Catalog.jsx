@@ -1,8 +1,13 @@
+import { Product } from "../../Product/Product"
 
-
-function Catalog() {
-  return (
-    <div>Catalog</div>
+function Catalog({products}) {
+    return (
+        <div className="catalog-container">
+            {products.map(product => (
+                <Product key={product.id} product={product}/>
+            ))}        
+      </div>
+    
   )
 }
 
