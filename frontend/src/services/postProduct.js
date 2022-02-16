@@ -1,7 +1,7 @@
+import Global from "../Global/Global";
 
 function postProduct (product) {
-
-    return fetch(apiUrl,
+    return fetch(Global.getProducts,
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -9,3 +9,4 @@ function postProduct (product) {
         }
     )
 }
+export {postProduct}
