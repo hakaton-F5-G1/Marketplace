@@ -47,19 +47,20 @@ img {
 .close-hamburguer {
   display: none;
 }
-.open-hamburguer{
-	background: none;
-	border:none;
-	display: none;
+.open-hamburguer {
+  background: none;
+  border: none;
+  display: none;
 }
-.open-hamburguer img{
-	width: 1.6rem;
+.open-hamburguer img {
+  width: 1.6rem;
 }
-@media (max-width: 820px) {
+@media (max-width: 880px) {
   nav {
     width: 98vw;
   }
   .list {
+    z-index: 1;
     position: fixed;
     top: -10px;
     /* left: -10px; */
@@ -77,15 +78,15 @@ img {
   .hide {
     display: none;
   }
-  .open-hamburguer{
-	  display: initial;
+  .open-hamburguer {
+    display: initial;
   }
   .close-hamburguer {
     display: initial;
-	display: initial;
+    display: initial;
     border: none;
     color: white;
     background: none;
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
 }

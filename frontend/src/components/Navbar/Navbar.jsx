@@ -26,11 +26,11 @@ const Navbar = () => {
             </li>
             <li className="menuitem">
               <Link className="nav-link" to="/animales">
-                Animaes
+                Animales
               </Link>
             </li>
             <li className="btn-publicar">
-              <Link className="nav-link publicar" to="/añadir">
+              <Link className="nav-link publicar" to="/agregar">
                 Publica tu anuncio
               </Link>
             </li>

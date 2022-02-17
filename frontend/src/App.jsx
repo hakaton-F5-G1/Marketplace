@@ -41,7 +41,7 @@ function App() {
             element={<ProductsItems />}
           ></Route>
           <Route
-            path="/add"
+            path="/agregar"
             element={<AddForm addProduct={addProduct} />}
           ></Route>
         </Routes>
