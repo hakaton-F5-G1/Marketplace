@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from "react";
 import { getProducts } from './services/getProducts';
 import { getProductById } from './services/getProductById';
+import Navbar from "./components/Navbar/Navbar"
 
 
 function App() {
@@ -30,7 +31,9 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Catalog products={products} />
+      
     </div>
   );
 }
