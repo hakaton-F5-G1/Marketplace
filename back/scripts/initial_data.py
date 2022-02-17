@@ -3,34 +3,40 @@ sys.path.insert(0, "")
 from src.domain.product import ProductRepository, Product
 
 
-
 database_path = "data/products-list.db"
 
 
-zapatillas_nike = Product(
-    id="product-24",
-    name="Zapatillas Nike deportivas",
-    description="Nuevas a estrenar, solo las he usado 4 veces",
+scissor_socks = Product(
+    id="product-1",
+    name="Calcetines azules Sin Anestesia",
+    description="Calcetines divertidos con motivos sanitarios de algodón, sin costuras y hechos en España!",
     price=22,
-    image="https://www.invain.com/es-es/magazine/wp-content/uploads/2021/03/lo-ultimo-zapatillas-nike.jpg",
+    image="https://www.enfermania.com/7716-large_default/calcetines-estampados-sin-anestesia.jpg",
 )
-zapas_adidas = Product(
-    id="product-91",
-    name="Zapatillas Adidas deportivas",
-    description="Nuevas a estrenar, solo las he usado 4 veces",
-    price=22,
-    image="https://www.invain.com/es-es/magazine/wp-content/uploads/2021/03/lo-ultimo-zapatillas-nike.jpg",
+sushi_socks = Product(
+    id="product-2",
+    name="Estampado shushi",
+    description="Fabricados en españa, con la más esencia japonesa",
+    price=12,
+    image="https://sushiholics.net/wp-content/uploads/2020/11/calcetines-estampados-sushi.jpg",
 )
-bicicleta_montañera_barata = Product(
-    id="product-51",
-    name="Bicicleta Montañera XTREME",
-    description="Perfecta para subir entre senderos y no caerte",
+healthy_socks = Product(
+    id="product-3",
+    name="Healthy",
+    description="Estos calcetines, te recordarán que debes que debes cuidar tu salud",
     price=590,
-    image="https://www.invain.com/es-es/magazine/wp-content/uploads/2021/03/lo-ultimo-zapatillas-nike.jpg",
+    image="https://libreriamedica.es/90891-large_default/calcetines-estampados-healthy-tools-color-celeste.jpg",
 )
-
+harry_potter_socks = Product(
+    id="product-4",
+    name="Harry Potter",
+    description="Estos calcetines, te darán la magia que tanto necesitas en tu vida",
+    price=590,
+    image="https://www.marlosonline.es/192299-superlarge_default/calcetines-harry-potter-2.jpg",
+)
 
 product_repository = ProductRepository(database_path)
-product_repository.save(zapas_adidas)
-product_repository.save(zapatillas_nike)
-product_repository.save(bicicleta_montañera_barata)
+product_repository.save(scissor_socks)
+product_repository.save(sushi_socks)
+product_repository.save(healthy_socks)
+product_repository.save(harry_potter_socks)
