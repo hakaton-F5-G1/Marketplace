@@ -49,7 +49,7 @@ img {
 }
 .open-hamburguer{
 	background: none;
-	color: none;
+	border:none;
 }
 .open-hamburguer img{
 	width: 1.6rem;
