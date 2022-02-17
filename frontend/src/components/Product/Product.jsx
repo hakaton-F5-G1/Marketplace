@@ -9,7 +9,11 @@ function Product({ product }) {
             </div>
             <span className="container-info">
                 <p className="container-name">{name}</p>
-                <p className="container-info--price">{price}</p>
+                <span className="container-subinfo">
+                    <p className="container-info--price">{price}</p>
+                    <button>Ver detalles</button>
+                </span>
+                
             </span>
         </div>
     )
