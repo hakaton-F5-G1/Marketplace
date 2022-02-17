@@ -33,16 +33,13 @@ nav{
     cursor: pointer;
     text-decoration: none;
 }
-
-
 .line {
     padding: 50px;
     margin: -65px 0px -25px;
     max-width: 80%;
 }
-
 .nav-link  { 
-font-size: 1rem;
+font-size: 1.2rem;
 color: #000;
 text-decoration: none;
 }
