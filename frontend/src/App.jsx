@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     getProducts()
       .then(data => setProducts(data));
-  }, []);
+  });
 
 
 	const addProduct = async (product) => {
