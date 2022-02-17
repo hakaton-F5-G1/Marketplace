@@ -1,12 +1,12 @@
 import "./addForm.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { v4 as uuidv4 } from "uuid";
 export const AddForm = (props) => {
   let navigate = useNavigate();
 
   const [datos, setDatos] = useState({
-    id: "",
+    id: uuidv4(),
     name: "",
     description: "",
     price: 0,
