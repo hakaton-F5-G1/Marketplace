@@ -20,7 +20,7 @@ const AddForm = ({ id, name, ammout, image, addtocart }) => {
 
 
 export default AddForm; */
-
+import "./addForm.css"
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -70,10 +70,11 @@ export const AddForm = (props) => {
 
 						<div className="form-group">
 							<label htmlFor="">Descripción</label>
-							<textarea value={datos.description}
-								name="description" id="" cols="50" rows="5"
+							<textarea
 								className="form-control"
-								onChange={handleInputChange} />
+								name="description" id="" cols="50" rows="5"
+								onChange={handleInputChange}
+								value={datos.description} />
 						</div>
 
 						<div className="form-group">

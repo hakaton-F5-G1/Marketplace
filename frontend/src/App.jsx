@@ -1,4 +1,5 @@
 import { Catalog } from './components/Catalog/Catalog';
+import { AddForm } from './components/AddForm/AddForm';
 import Global from "./Global/Global";
 import './App.css';
 import { useEffect, useState } from "react";
@@ -21,8 +22,6 @@ function App() {
       .then(data => setProducts(data));
   }, []);
 
-  
-
 
 	const addProduct = (product) => {
 		return fetch(Global.getProducts,
@@ -43,8 +42,9 @@ function App() {
               <Navbar />
               <Routes>
                 <Route path="/" element={<Catalog products={products} />}></Route>
-                <Route path="/product/:idproduct" element={<ProductsItems />}></Route> 
-                
+                <Route path="/product/:idproduct" element={<ProductsItems />}></Route> 					
+					 <Route path="/add" element={<AddForm addProduct={addProduct} />}></Route> 
+							
               </Routes>
             </Router>
             
