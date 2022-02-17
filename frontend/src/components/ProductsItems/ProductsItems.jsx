@@ -8,18 +8,18 @@ import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../../services/getProductById";
-import Modal from "./modal";
-import "./productsitem.css";
+import DataService from "../../services/DataService";
+import Modal from "./modal"
 
 function ProductsItems() {
-  const params = useParams();
-  const [product, setProduct] = useState();
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    getProductById(params.id).then((data) => setProduct(data));
-  }, [params.id]);
+    const [isOpen, setIsOpen] = useState(false);
+    const params = useParams()
+    const [product, setProduct] = useState();
+    
+    useEffect(() => {
+        DataService.getItemById(params.id)
+            .then(data => setProduct(data))
+    }, [params.id])
 
   return (
     <>
