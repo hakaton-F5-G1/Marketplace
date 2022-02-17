@@ -22,7 +22,7 @@ function ProductsItems() {
     }, [params.id])
 
   return (
-    <>
+    <main>
       {product && (
         <>
           <Modal open={isOpen} onClose={() => setIsOpen(false)}>
@@ -75,7 +75,7 @@ function ProductsItems() {
           </Grid>
         </>
       )}
-    </>
+    </main>
   );
 }
 
