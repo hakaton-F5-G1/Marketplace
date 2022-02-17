@@ -42,7 +42,7 @@ function App() {
 					element={<ProductsItems />}
 				></Route>
 				<Route
-					path="/add"
+					  path="/add"
 					element={<AddForm addProduct={addProduct} />}
 				></Route>
 			</Routes>

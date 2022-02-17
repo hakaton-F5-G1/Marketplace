@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     flex-shrink: 0;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .bottomNavBar-container {
@@ -9,13 +9,18 @@
    width: 100%;
    margin: auto;
 	border-radius: 20px;
-	
 }
 
+.bottomNavBar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
 
- ul {
-display: flex;
-justify-content: space-evenly;
+.bottomNavBar-links {
+	width: 100%;
+	display: flex;
+	gap: 3vw;
 }
 
 .bottomNavBar-brand {

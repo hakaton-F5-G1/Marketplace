@@ -1,5 +1,5 @@
 
-import logo from "../../assets/logo.png";
+import logo from "../assets/logo.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import hamburguer from "../assets/hamburguer.png";
@@ -31,7 +31,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="btn-publicar">
-              <Link className="nav-link publicar" to="/añadir">
+              <Link className="nav-link publicar" to="/add">
                 Publica tu anuncio
               </Link>
             </li>
