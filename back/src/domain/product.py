@@ -2,7 +2,7 @@ import sqlite3
 
 
 class Product:
-    def __init__(self, id, name, description, price, image):
+    def __init__(self, id, name, description, price, image,mail,phone):
         self.id = id
         self.name = name
         self.description = description
