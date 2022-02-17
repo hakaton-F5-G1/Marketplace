@@ -1,8 +1,8 @@
-import { Catalog } from '../Catalog/Catalog';
+import { Catalog } from './components/Catalog/Catalog';
 import './App.css';
 import { useEffect, useState } from "react";
-import { getProducts } from '../../services/getProducts';
-import { getProductById } from '../../services/getProductById';
+import { getProducts } from './services/getProducts';
+import { getProductById } from './services/getProductById';
 
 
 function App() {
