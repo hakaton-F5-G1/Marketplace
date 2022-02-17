@@ -9,11 +9,11 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductsItems } from "./components/ProductsItems/ProductsItems";
 import { Landing } from "./components/landing/landing";
+import { Favorites } from "./components/Favorites/Favorites";
 function App() {
   /* const [requiresUpdate, setRequiresUpdate] = useState(true); */
   const [products, setProducts] = useState([]);
-  console.log();
-
+  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
     getProducts().then((data) => setProducts(data));
   });
@@ -43,6 +43,10 @@ function App() {
           <Route
             path="/agregar"
             element={<AddForm addProduct={addProduct} />}
+          ></Route>
+          <Route
+            path="/favoritos"
+            element={<Favorites/>}
           ></Route>
         </Routes>
         {/* <button onClick={addProduct}>CLick</button> */}
