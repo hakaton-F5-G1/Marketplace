@@ -1,4 +1,4 @@
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./landing.css";
 import Logo from "../assets/logo05.png";
 export function Landing() {
@@ -16,7 +16,7 @@ export function Landing() {
       <div className="flex-logotext">
         <img id="logo" src={Logo} alt="Logo de reanimales" />
         <span className="busca-un-perro">
-          <Link to="/animales">
+          <Link to={"/animales"}>
             <button>
               <h1>Descubre mascotas...</h1>
               <img

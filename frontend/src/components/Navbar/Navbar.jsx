@@ -1,3 +1,4 @@
+
 import logo from "../assets/logo.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
@@ -11,7 +12,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div>
+      <header>
         <nav>
           <div className="logo-container">
             <Link to="/">
@@ -42,7 +43,7 @@ const Navbar = () => {
             <img src={hamburguer} alt="" />
           </button>
         </nav>
-      </div>
+      </header> 
     </>
   );
 };

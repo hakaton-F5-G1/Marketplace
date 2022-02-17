@@ -5,7 +5,8 @@ import { Catalog } from "./components/Catalog/Catalog";
 import { useEffect, useState } from "react";
 import { getProducts } from "./services/getProducts";
 /* import { getProductById } from './services/getProductById'; */
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar"
+import { Footer } from "./components/Footer/Footer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductsItems } from "./components/ProductsItems/ProductsItems";
 import { Landing } from "./components/landing/landing";
@@ -49,7 +50,7 @@ function App() {
             element={<Favorites/>}
           ></Route>
         </Routes>
-        {/* <button onClick={addProduct}>CLick</button> */}
+		  <Footer />
       </BrowserRouter>
     </div>
   );

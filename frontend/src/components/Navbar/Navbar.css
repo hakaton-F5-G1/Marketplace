@@ -1,12 +1,24 @@
+header {
+	margin-bottom: 50px;
+	}
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  align-items: center;
-  margin: 10px;
-  border: 5px solid #f0eded;
-  background-color: #ffffff;
-  padding: 15px 30px;
+    display: flex;
+	 justify-content: space-between;
+	 gap: 50px;
+    align-items: center;
+    margin: 10px;
+    background-color: #ffffff;
+	 padding: 15px 30px;
+	 border-radius: 20px;
+}
+
+.line {
+    padding: 50px;
+    margin: -65px 0px -25px;
+    width: 100%;
+	 text-align: center;
+	 z-index: -1;
 }
 .logo-container {
   display: flex;
@@ -31,8 +43,8 @@ img {
   list-style-type: none;
 }
 
-.nav-link {
-  font-size: 1.2rem;
+.nav-link  { 
+	font-size: 1.1rem;
 }
 
 .btn-publicar {
@@ -42,7 +54,7 @@ img {
 }
 
 .publicar {
-  color: #fff;
+	color: #fff;
 }
 .close-hamburguer {
   display: none;

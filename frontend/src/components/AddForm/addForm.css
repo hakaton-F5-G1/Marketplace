@@ -1,10 +1,10 @@
-	 .form-wrapper {
+.form-wrapper {
     margin-bottom: 50px;
 }
 
 .form-section {
     width: 45%;
-    background-color: #e8a036;
+    background-color: #ecbb70;
     margin: auto;
     padding: 20px 20px 2px 20px;
     border-radius: 10px;
@@ -60,7 +60,6 @@ textarea {
     border-radius: 5px;
     width: 60%;
     overflow: hidden;
-    resize: none;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     border: 1px solid #ccc7c7;
@@ -119,7 +118,7 @@ textarea:hover {
     z-index: -1;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
     transition: all 0.3s ease;
-    background-color: #38603f;
+    background-color: #94251e;
     right: 0;
 }
 
