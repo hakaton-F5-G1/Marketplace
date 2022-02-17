@@ -10,6 +10,7 @@ function Catalog({ products }) {
   }
   return (
     <main>
+      <h2>Compra, regala y vende</h2>
       <label htmlFor="producto"></label>
       <input
         name="producto"

@@ -26,11 +26,14 @@ def test_should_return_product_in_database():
     client = app.test_client()
 
     zapatillas_nike = Product(
-        id="product-24",
-        name="Zapatillas Nike deportivas",
-        description="Nuevas a estrenar, solo las he usado 4 veces",
-        price=22,
-        image="",
+        id = "product-24",
+        name = "Zapatillas Nike deportivas",
+        description = "Nuevas a estrenar, solo las he usado 4 veces",
+        price = 22,
+        image = "",
+        mail = "",
+        phone = "",
+        city = "Bilbao",
     )
     products_repository.save(zapatillas_nike)
 
@@ -45,5 +48,8 @@ def test_should_return_product_in_database():
             "description": "Nuevas a estrenar, solo las he usado 4 veces",
             "price": 22,
             "image": "",
+            "mail": "",
+            "phone": "",
+            "city":"Bilbao",
         }
     ]
