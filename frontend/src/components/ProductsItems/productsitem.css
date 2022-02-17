@@ -1,0 +1,16 @@
+.name-price {
+    justify-content: space-between;
+}
+
+#contact-btn {
+    background-color: #b7463e;
+}
+
+* {
+    text-align: left;
+}
+
+#back-link {
+    color: #d7756e;
+    font-style: italic;
+}
