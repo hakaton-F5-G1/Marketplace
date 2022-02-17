@@ -15,7 +15,7 @@ nav{
     padding-right: 20px;
     background-color: #ffffff;
     width: 100%;
-    
+    max-width: 10%;
 }
 
 .list{
@@ -55,7 +55,7 @@ nav{
 .line {
     padding: 50px;
     margin: -65px 0px -25px;
-    
+    max-width: 80%;
 }
 
 .menuitem a  { 
