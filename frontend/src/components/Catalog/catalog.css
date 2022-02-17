@@ -5,4 +5,14 @@
   gap: 5rem;
   grid-auto-flow: dense;
   grid-auto-rows: 22rem;
+  place-content: center;
+}
+input {
+  border: 5px solid black;
+  height: 3rem;
+  width: 30rem;
+  border-radius: 10px;
+}
+input::placeholder {
+  font-size: 1.1rem;
 }

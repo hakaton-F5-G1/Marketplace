@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from '../../services/getProductById';
+import Modal from "./modal"
 
 function ProductsItems() {
+    const [isOpen, setIsOpen] = useState(false);
     const params = useParams()
     const [product, setProduct] = useState();
     
@@ -25,6 +27,11 @@ function ProductsItems() {
                         </span>
                         <p>{product.description}</p>
                     </span>
+                    <button onClick={() => setIsOpen(true)}>Contacto</button>
+            <Modal open = {isOpen} onClose = {() => setIsOpen(false)}>
+                Telefono: 691233214
+                Email: asdasd@gmail.com
+            </Modal>
                 </div> }
         </>
     )

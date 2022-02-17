@@ -10,7 +10,7 @@ function Catalog({ products }) {
     }
     return (
         <main>
-            <input type="text" onChange={getData} />
+            <input type="text" onChange={getData} placeholder = "Busca un producto específico"/>
             
             <section className="catalog-container">
                 {products.map((product) => {
@@ -18,7 +18,8 @@ function Catalog({ products }) {
                         return <Product key={product.id} product={product} />
                     }
                 })}        
-        </section>
+            </section>
+            
       </main>
 
   )
