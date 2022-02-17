@@ -32,19 +32,28 @@ function App() {
 	}
 
   return (
-		<div className = "App">
-			<BrowserRouter>
-				<Navbar />
-				<Routes>
-				<Route path="/" element={<Catalog products={products} />}></Route>
-				<Route path="/product/:id" element={<ProductsItems />}></Route>
-				<Route path="/add" element={<AddForm addProduct={addProduct} />}></Route>
-				</Routes>
-				{/* <button onClick={addProduct}>CLick</button> */}
-			</BrowserRouter>
-		</div>
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+          <Route
+            path="/animales"
+            element={<Catalog products={products} />}
+          ></Route>
+          <Route
+            path="/animales/animal/:id"
+            element={<ProductsItems />}
+          ></Route>
+          <Route
+            path="/agregar"
+            element={<AddForm addProduct={addProduct} />}
+          ></Route>
+        </Routes>
+        {/* <button onClick={addProduct}>CLick</button> */}
+      </BrowserRouter>
+    </div>
   );
-	  
 }
 
 export default App;
