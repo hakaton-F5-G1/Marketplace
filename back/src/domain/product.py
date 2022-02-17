@@ -8,6 +8,8 @@ class Product:
         self.description = description
         self.price = price
         self.image = image
+        self.mail = mail
+        self.phone = phone
 
     def to_dict(self):
         return {
@@ -16,6 +18,8 @@ class Product:
             "description": self.description,
             "price": self.price,
             "image": self.image,
+            "mail":self.mail,
+            "phone":self.phone,
         }
 
 
@@ -36,7 +40,9 @@ class ProductRepository:
             name TEXT NOT NULL,
             description TEXT NOT NULL,
             price REAL NOT NULL,
-            image TEXT NOT NULL
+            image TEXT NOT NULL,
+            mail TEXT NOT NULL,
+            phone TEXT NOT NULL
         );"""
         conn = self.create_conn()
         cursor = conn.cursor()
@@ -67,8 +73,8 @@ class ProductRepository:
         return product
 
     def save(self, product):
-        sql = """insert into products (id,name,description,price,image) values (
-            :id, :name, :description, :price, :image
+        sql = """insert into products (id,name,description,price,image,mail,phone) values (
+            :id, :name, :description, :price, :image, :mail, :phone
         ) """
         conn = self.create_conn()
         cursor = conn.cursor()
