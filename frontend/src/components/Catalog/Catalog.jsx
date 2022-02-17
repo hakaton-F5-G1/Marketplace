@@ -1,4 +1,4 @@
-import { Product } from "../../Product/Product"
+import { ActionAreaCard } from "../card-product/card-product"
 import "./catalog.css"
 
 
@@ -6,7 +6,7 @@ function Catalog({products}) {
     return (
         <section className="catalog-container">
             {products.map(product => (
-                <Product key={product.id} product={product}/>
+                <ActionAreaCard key={product.id} product={product}/>
             ))}        
       </section>
     

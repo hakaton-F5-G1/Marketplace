@@ -1,7 +1,7 @@
 import "./products.css"
 
 function Product({ product }) {
-    const { name, image, price } = product
+    const { name, image, price, } = product
     return (
         <div className="product">
             <div className="container-img">
