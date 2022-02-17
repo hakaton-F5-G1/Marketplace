@@ -1,4 +1,5 @@
 import { Catalog } from './components/Catalog/Catalog';
+import Global from "./Global/Global";
 import './App.css';
 import { useEffect, useState } from "react";
 import { getProducts } from './services/getProducts';
@@ -22,11 +23,16 @@ function App() {
       .then(data => setProduct(data))
   }, [idProduct])
 
-  /*     const addProduct = (product) => {
-          postProduct(product)
-              .then(_ => setRequiresUpdate(true))
-      }, [])
-   */
+
+	const addProduct = (product) => {
+		return fetch(Global.getProducts,
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(product)
+			}
+		).then(data => setProducts(data));
+	}
 
   return (
     <div className="App">
