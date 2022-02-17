@@ -30,7 +30,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="btn-publicar">
-              <Link className="nav-link publicar" to="/añadir">
+              <Link className="nav-link publicar" to="/agregar">
                 Publica tu anuncio
               </Link>
             </li>

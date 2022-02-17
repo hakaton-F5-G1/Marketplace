@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./landing.css";
 import Logo from "../assets/logo05.png";
 export function Landing() {
