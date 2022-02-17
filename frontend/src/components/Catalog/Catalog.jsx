@@ -2,16 +2,18 @@ import { Product } from "../Product/Product";
 import "./catalog.css";
 import React from "react";
 
+
+
 function Catalog({ products }) {
   const [state, setState] = React.useState({ filter: "" });
   function getData(val) {
     setState({ filter: val.target.value.toLowerCase() });
-    console.warn(val.target.value);
   }
   return (
     <main>
       <label htmlFor="producto"></label>
       <input
+        className="searchBar"
         name="producto"
         type="text"
         onChange={getData}
@@ -37,6 +39,7 @@ function Catalog({ products }) {
           ) {
             return <Product key={product.id} product={product} />;
           }
+          return ""
         })}
       </section>
     </main>
