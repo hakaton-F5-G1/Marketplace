@@ -2,7 +2,6 @@ import sys
 sys.path.insert(0, "")
 from src.domain.product import ProductRepository, Product
 
-
 database_path = "data/products-list.db"
 
 
