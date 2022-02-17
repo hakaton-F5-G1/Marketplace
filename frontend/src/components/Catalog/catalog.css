@@ -20,3 +20,6 @@ input::placeholder {
   font-size: 0.8rem;
   max-width: none;
 }
+h2 {
+  margin-top: 1rem;
+}
