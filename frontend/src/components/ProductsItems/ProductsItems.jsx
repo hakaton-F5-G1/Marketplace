@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import SvgIcon from "@mui/material/SvgIcon";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -25,7 +24,9 @@ function ProductsItems() {
   return (
     <>
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        Telefono: 691233214 Email: asdasd@gmail.com
+        <p>{product.phone}</p>
+        <p>{product.mail}</p>
+        <h2>Contacto:</h2>
       </Modal>
       {product && (
         <Grid item>
