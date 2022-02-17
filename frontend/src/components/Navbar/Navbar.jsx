@@ -2,6 +2,7 @@
 import logo from "../assets/logo.png";
 import line from "../assets/Line.png";
 import Styles from "../Navbar/Navbar.css"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   
@@ -10,10 +11,14 @@ const Navbar = () => {
       <div>
         <nav>
           
+          <Link to="/">
             <img src={logo} className={Styles.logo} alt="Website" />
-            <div>
+          </Link>
+
+            <div className={Styles.Navbar}>
             <ul className={Styles.list}>
-              <li className={Styles.menuitem}>Productos</li>
+              
+              <li>Productos</li>
               
             </ul>
 
@@ -23,6 +28,7 @@ const Navbar = () => {
          
         </nav>
         <img src={line} className={Styles.line} alt="line" />
+      
       </div>
       
       
