@@ -11,14 +11,14 @@ function Product({ product }) {
     return (
         <Link to={`product/${id}`}>
             <Card sx={{ maxWidth: 345 }}>
-                <container fixed>
+                <div>
                     <CardMedia
                         component="img"
                         height="300"
                         image={image}
                         alt="product-img"
                     />
-                </container>
+                </div>
                 <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
                         {name}
