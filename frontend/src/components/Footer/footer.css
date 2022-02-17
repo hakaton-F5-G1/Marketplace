@@ -13,11 +13,10 @@
 }
 
 
-.bottomNavBar-links {
+ ul {
 display: flex;
 justify-content: space-evenly;
 }
-
 
 .bottomNavBar-brand {
     text-align: left;
@@ -36,7 +35,9 @@ justify-content: space-evenly;
     display: flex;
     gap: 5px;
 }
-
+.nav-item {
+	list-style: none;
+}
 .bottomNavBar-links .nav-link   { 
 	font-size: 0.9rem;
 }
