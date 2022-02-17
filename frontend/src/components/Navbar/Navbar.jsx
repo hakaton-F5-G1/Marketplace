@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import line from "../assets/Line.png";
-import Styles from "../Navbar/Navbar.css"
+import "./Navbar.css"
 
 const Navbar = () => {
   
@@ -9,25 +9,19 @@ const Navbar = () => {
     <>
       <div>
         <nav>
-          
-            <img src={logo} className={Styles.logo} alt="Website" />
+            <img src={logo} className="logo" alt="Website" />
             <div>
-            <ul className={Styles.list}>
-						  <li className={Styles.menuitem}>
-							  <Link className="nav-link" to="/">Productos</Link>
-						  </li>
-						  <li className={Styles.menuitem}>
-							  <Link className="nav-link" to="/add">Añadir producto</Link>
-						  </li>
-              
-            </ul>
-
-
+					<ul className="list">
+							<li className="menuitem">
+								<Link className="nav-link" to="/">Productos</Link>
+							</li>
+							<li className="menuitem">
+								<Link className="nav-link" to="/add">Añadir anuncio</Link>
+							</li>
+					</ul>
             </div>
-            
-         
         </nav>
-        <img src={line} className={Styles.line} alt="line" />
+        <img src={line} className="line" alt="line" />
       </div>
       
       

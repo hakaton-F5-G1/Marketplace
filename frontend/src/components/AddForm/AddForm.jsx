@@ -60,7 +60,7 @@ export const AddForm = (props) => {
 					<form className="edit-form" onSubmit={enviarDatos} action="">
 
 						<div className="form-group">
-							<label htmlFor="">Nombre de la experiencia</label>
+							<label htmlFor="">Titulo</label>
 							<input type="text"
 								className="form-control"
 								onChange={handleInputChange}
@@ -78,7 +78,7 @@ export const AddForm = (props) => {
 						</div>
 
 						<div className="form-group">
-							<label htmlFor="">Precio p/p</label>
+							<label htmlFor="">Precio</label>
 							<input type="text"
 								className="form-control"
 								onChange={handleInputChange}
@@ -87,12 +87,12 @@ export const AddForm = (props) => {
 						</div>
 
 						<div className="form-group">
-							<label htmlFor="">Duración</label>
+							<label htmlFor="">Imagen</label>
 							<input type="text"
 								className="form-control"
 								onChange={handleInputChange}
 								name="image"
-								value={datos.image} />
+								/*value={datos.image} *//>
 						</div>
 
 
