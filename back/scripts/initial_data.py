@@ -11,6 +11,8 @@ scissor_socks = Product(
     description="Calcetines divertidos con motivos sanitarios de algodón, sin costuras y hechos en España!",
     price=22,
     image="https://www.enfermania.com/7716-large_default/calcetines-estampados-sin-anestesia.jpg",
+    mail="franciscojose@gmail.com",
+    phone="691755232",
 )
 sushi_socks = Product(
     id="product-2",
@@ -18,6 +20,8 @@ sushi_socks = Product(
     description="Fabricados en españa, con la más esencia japonesa",
     price=12,
     image="https://sushiholics.net/wp-content/uploads/2020/11/calcetines-estampados-sushi.jpg",
+    mail="luisitoeljefe@gmail.com",
+    phone="611233214",
 )
 healthy_socks = Product(
     id="product-3",
@@ -25,6 +29,8 @@ healthy_socks = Product(
     description="Estos calcetines, te recordarán que debes que debes cuidar tu salud",
     price=590,
     image="https://libreriamedica.es/90891-large_default/calcetines-estampados-healthy-tools-color-celeste.jpg",
+    mail="libertarioriginal@gmail.com",
+    phone="791223321",
 )
 harry_potter_socks = Product(
     id="product-4",
@@ -32,6 +38,8 @@ harry_potter_socks = Product(
     description="Estos calcetines, te darán la magia que tanto necesitas en tu vida",
     price=590,
     image="https://www.marlosonline.es/192299-superlarge_default/calcetines-harry-potter-2.jpg",
+    mail="alisatech@gmail.com",
+    phone="691233242",
 )
 
 product_repository = ProductRepository(database_path)
