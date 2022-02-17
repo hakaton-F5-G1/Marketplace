@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from './services/getProducts';
 /* import { getProductById } from './services/getProductById'; */
 import Navbar from "./components/Navbar/Navbar"
+import { Footer } from "./components/Footer/Footer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductsItems } from './components/ProductsItems/ProductsItems';
 
@@ -41,8 +42,8 @@ function App() {
 				<Route path="/" element={<Catalog products={products} />}></Route>
 				<Route path="/product/:id" element={<ProductsItems />}></Route>
 				<Route path="/add" element={<AddForm addProduct={addProduct} />}></Route>
-				</Routes>
-				{/* <button onClick={addProduct}>CLick</button> */}
+			  </Routes>
+			  <Footer/>
 			</BrowserRouter>
 		</div>
   );

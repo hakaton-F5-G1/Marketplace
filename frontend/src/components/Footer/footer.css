@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 40px;
+}
+
+.bottomNavBar-container {
+	background-color: #fff;
+   width: 100%;
+   margin: auto;
+	border-radius: 20px;
+	
+}
+
+
+.bottomNavBar-links {
+display: flex;
+justify-content: space-evenly;
+}
+
+
+.bottomNavBar-brand {
+    text-align: left;
+}
+
+.bottomNavBar-brand a {
+    text-align: left;
+	 font-size: 1.2rem;
+}
+
+.bottomNavBar-brand p {
+    font-size: 12px;
+}
+
+.social {
+    display: flex;
+    gap: 5px;
+}
+
+.bottomNavBar-links .nav-link   { 
+	font-size: 0.9rem;
+}
+
+.icono-rs {
+    width: 25px;
+}
