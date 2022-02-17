@@ -18,6 +18,9 @@ def test_should_return_product_by_id():
         description="Nuevas a estrenar, solo las he usado 4 veces",
         price=22,
         image="",
+        mail="",
+        phone="",
+        city="Bilbao",
     )
 
     zapas_adidas = Product(
@@ -26,6 +29,9 @@ def test_should_return_product_by_id():
         description="Nuevas a estrenar, solo las he usado 4 veces",
         price=22,
         image="",
+        mail="",
+        phone="",
+        city="Bilbao",
     )
 
     products_repository.save(zapas_adidas)
@@ -42,4 +48,7 @@ def test_should_return_product_by_id():
         "description": "Nuevas a estrenar, solo las he usado 4 veces",
         "price": 22,
         "image": "",
+        "mail":"",
+        "phone":"",
+        "city":"Bilbao",
     }

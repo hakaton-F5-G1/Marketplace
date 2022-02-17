@@ -8,6 +8,7 @@
   place-content: center;
 }
 input {
+  margin-top: 2rem;
   border: 5px solid black;
   height: 3rem;
   width: 30rem;
@@ -15,4 +16,7 @@ input {
 }
 input::placeholder {
   font-size: 0.8rem;
+}
+h2 {
+  margin-top: 1rem;
 }
