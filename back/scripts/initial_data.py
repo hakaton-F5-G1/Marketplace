@@ -13,7 +13,7 @@ scissor_socks = Product(
     image="https://www.enfermania.com/7716-large_default/calcetines-estampados-sin-anestesia.jpg",
     mail="franciscojose@gmail.com",
     phone="691755232",
-    city = "Bilbao",
+    city = "Reikiavik",
 )
 sushi_socks = Product(
     id="product-2",
@@ -23,7 +23,7 @@ sushi_socks = Product(
     image="https://sushiholics.net/wp-content/uploads/2020/11/calcetines-estampados-sushi.jpg",
     mail="luisitoeljefe@gmail.com",
     phone="611233214",
-    city = "Bilbao",
+    city = "Gijón",
 )
 healthy_socks = Product(
     id="product-3",
@@ -43,7 +43,7 @@ harry_potter_socks = Product(
     image="https://www.marlosonline.es/192299-superlarge_default/calcetines-harry-potter-2.jpg",
     mail="alisatech@gmail.com",
     phone="691233242",
-    city = "Bilbao",
+    city = "Barcelona",
 )
 
 product_repository = ProductRepository(database_path)

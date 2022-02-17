@@ -30,9 +30,11 @@ def create_app(repositories):
         product_by_id = repositories["product"].get_products_by_id(id)
         return object_to_json(product_by_id)
 
-    @app.route("/api/product/<id>", methods=["DELETE"])
-    def product_delete_by_id(id):
-        product_deleted = repositories["product"].delete_product_by_id(id)
-        return ""
+    @app.route("/api/products/ciudad/<city>", methods=["GET"])
+    def product_get_by_city(city):
+        product_by_city = repositories["product"].get_products_by_city(city)
+        return object_to_json(product_by_city)
+    
+    
 
     return app

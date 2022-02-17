@@ -84,13 +84,16 @@ class ProductRepository:
         cursor.execute(sql, product.to_dict())
 
         conn.commit()
-
-    def delete_product_by_id(self, id):
-        sql = """
-            DELETE FROM products
-            WHERE products.id = :id
-        """
+    def get_products_by_city(self, city):
+        sql = """select * from products where city =:city"""
         conn = self.create_conn()
         cursor = conn.cursor()
-        cursor.execute(sql, {"id": id})
-        conn.commit()
+        cursor.execute(sql, {"city": city})
+
+        data = cursor.fetchall()
+        result = []
+        for item in data:
+            product = Product(**item)
+            result.append(product)
+        return result
+    
