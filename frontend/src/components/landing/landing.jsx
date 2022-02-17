@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./landing.css";
 import Logo from "../assets/logo05.png";
 export function Landing() {
@@ -17,7 +17,7 @@ export function Landing() {
         <img id="logo" src={Logo} alt="Logo de reanimales" />
         <span className="busca-un-perro">
           <Link to={"/animales"}>
-            <button onClick="">
+            <button>
               <h1>Descubre mascotas...</h1>
               <img
                 src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/59bbb29c5bafe878503c9872/husky-siberiano-bosque.jpg"

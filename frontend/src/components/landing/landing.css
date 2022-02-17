@@ -1,3 +1,6 @@
+* {
+  font-family: Poppins;
+}
 #logo {
   width: 30%;
   filter: drop-shadow(1px 1px 10px black);
@@ -40,6 +43,7 @@ h2 {
 .busca-un-perro {
   width: 25vw;
   height: 35vh;
+  text-align: center;
 }
 .busca-un-perro img:hover {
   transform: scale(1.02);
