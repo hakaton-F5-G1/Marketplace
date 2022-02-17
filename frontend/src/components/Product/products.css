@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 * {
   text-decoration: none;
 }
@@ -6,6 +7,7 @@
   flex-direction: column;
   padding: 0 0.8rem;
   font-size: 1.3rem;
+  font-family: Montserrat;
 }
 .container-info p {
   margin: 0;
@@ -45,7 +47,7 @@
   transition: 0.1s ease-in;
   text-decoration: none;
   padding: 0.5rem;
-  margin-right: .4rem;
+  margin-right: 0.4rem;
 }
 .container-subinfo a:hover {
   transform: scale(1.05);
