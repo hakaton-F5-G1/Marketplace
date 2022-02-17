@@ -23,28 +23,28 @@ function App() {
   }, []);
 
 
-	const addProduct = (product) => {
+	const addProduct = async (product) => {
 		return fetch(Global.getProducts,
 			{
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(product)
 			}
-		).then(data => setProducts(data));
+		);
 	}
 
   return (
 		<div className = "App">
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Catalog products={products} />}></Route>
-        <Route path="/product/:id" element={<ProductsItems />}></Route>
-		  <Route path="/add" element={<AddForm addProduct={addProduct} />}></Route>
-
-      </Routes>
-		  </BrowserRouter>
-	  </div>
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+				<Route path="/" element={<Catalog products={products} />}></Route>
+				<Route path="/product/:id" element={<ProductsItems />}></Route>
+				<Route path="/add" element={<AddForm addProduct={addProduct} />}></Route>
+				</Routes>
+				<button onClick={addProduct}>CLick</button>
+			</BrowserRouter>
+		</div>
   );
 	  
 }

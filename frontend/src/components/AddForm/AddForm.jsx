@@ -1,4 +1,3 @@
-
 import "./addForm.css"
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -10,9 +9,10 @@ export const AddForm = (props) => {
 
 
 	const [datos, setDatos] = useState({
+		id: '', 
 		name: '',
 		description: '',
-		price: null,
+		price: 0,
 		image: ''
 	})
 
@@ -22,14 +22,12 @@ export const AddForm = (props) => {
 			[event.target.name]: event.target.value
 		})
 	}
-
+	console.log(datos)
 	const enviarDatos = (event) => {
 		event.preventDefault()
 		props.addProduct(datos)
-			.then(() => navigate("/"))
+		navigate("/")
 	}
-
-
 	return (
 
 		<section className="form-section">
@@ -37,6 +35,14 @@ export const AddForm = (props) => {
 				<h1>Nuevo anuncio</h1>
 				<div className="form-container">
 					<form className="edit-form" onSubmit={enviarDatos} action="">
+						<div className="form-group">
+							<label htmlFor="">Id</label>
+							<input type="text"
+								className="form-control"
+								onChange={handleInputChange}
+								name="id"
+								value={datos.id} />
+						</div>
 
 						<div className="form-group">
 							<label htmlFor="">Titulo</label>
