@@ -50,6 +50,7 @@ img {
 .open-hamburguer{
 	background: none;
 	border:none;
+	display: none;
 }
 .open-hamburguer img{
 	width: 1.6rem;
@@ -75,6 +76,9 @@ img {
   }
   .hide {
     display: none;
+  }
+  .open-hamburguer{
+	  display: initial;
   }
   .close-hamburguer {
     display: initial;
