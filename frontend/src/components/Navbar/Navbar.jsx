@@ -1,8 +1,7 @@
-
 import logo from "../assets/logo.png";
 import line from "../assets/Line.png";
-import Styles from "../Navbar/Navbar.css"
-import { Link } from "react-router-dom";
+import "./Navbar.css"
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   
@@ -10,25 +9,18 @@ const Navbar = () => {
     <>
       <div>
         <nav>
-          
+
           <Link to="/">
-            <img src={logo} className={Styles.logo} alt="Website" />
+          <img src={logo} className="logo" alt="Website" />
           </Link>
-
-            <div className={Styles.Navbar}>
-            <ul className={Styles.list}>
-              
-              <li>Productos</li>
-              
+          
+            <div>
+            <ul className="list">
+              <li className="menuitem">Productos</li>
             </ul>
-
-
             </div>
-            
-         
         </nav>
-        <img src={line} className={Styles.line} alt="line" />
-      
+        <img src={line} className="line" alt="line" />
       </div>
       
       
