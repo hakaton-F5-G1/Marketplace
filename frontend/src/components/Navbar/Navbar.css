@@ -41,7 +41,8 @@ nav{
     max-width: 80%;
 }
 
-.Navbar lu{ 
-font-size: 7rem;
+.nav-link  { 
+font-size: 1rem;
+color: #000;
 text-decoration: none;
 }
