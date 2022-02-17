@@ -10,7 +10,6 @@
   margin: 2.4rem 0;
   gap: 8rem;
   grid-auto-flow: dense;
-  grid-auto-rows: 22rem;
   place-content: center;
   justify-items: center;
 }

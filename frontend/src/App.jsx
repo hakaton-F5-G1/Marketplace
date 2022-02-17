@@ -11,31 +11,31 @@ import { Landing } from "./components/landing/landing";
 import { Favorites } from "./components/Favorites/Favorites";
 import DataService from './services/DataService';
 function App() {
-  const [requiresUpdate, setRequiresUpdate] = useState(true); 
+  const [requiresUpdate, setRequiresUpdate] = useState(true);
   const [products, setProducts] = useState([]);
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    requiresUpdate?
-		DataService.getData()
-			.then(data =>
-				{
-					setProducts(data);
-					setRequiresUpdate(false);
-				})
-		:console.log("up to date");
-		 
-  },[requiresUpdate]);
+    requiresUpdate ?
+      DataService.getData()
+        .then(data => {
+          setProducts(data);
+          setRequiresUpdate(false);
+        })
+      : console.log("up to date");
+
+  }, [requiresUpdate]);
 
 
-	const addProduct =  (product) => {
-		DataService.addNew(product)
-		return setRequiresUpdate(true)
-	}
+  const addProduct = (product) => {
+    DataService.addNew(product)
+    return setRequiresUpdate(true)
+  }
 
   return (
-    <div className="App">
-      <BrowserRouter>
+
+    <BrowserRouter>
+      <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />}></Route>
@@ -53,12 +53,12 @@ function App() {
           ></Route>
           <Route
             path="/favoritos"
-            element={<Favorites/>}
+            element={<Favorites />}
           ></Route>
         </Routes>
-		  <Footer />
-      </BrowserRouter>
-    </div>
+      </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

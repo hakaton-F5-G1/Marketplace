@@ -6,7 +6,7 @@ import hamburguer from "../assets/hamburguer.png";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [statusMenu, setStatusMenu] = useState(false);
+  const [statusMenu, setStatusMenu] = useState(true);
   const changeMenu = () => {
     setStatusMenu(!statusMenu);
   };
@@ -22,7 +22,7 @@ const Navbar = () => {
           <ul className={`list ${statusMenu && "hide"}`}>
             <li className="menuitem">
               <Link className="nav-link" to="/">
-                Home
+                Inicio
               </Link>
             </li>
             <li className="menuitem">
