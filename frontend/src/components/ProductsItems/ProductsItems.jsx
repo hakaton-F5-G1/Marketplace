@@ -23,55 +23,57 @@ function ProductsItems() {
 
   return (
     <>
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        <p>{product.phone}</p>
-        <p>{product.mail}</p>
-        <h2>Contacto:</h2>
-      </Modal>
       {product && (
-        <Grid item>
-          <Typography
-            sx={{
-              display: "flex",
-              margin: "auto 1.1vh",
-              justifyContent: "flex-end",
-            }}
-          >
-            <Link id="back-link" to={"/"}>
-              Volver
-            </Link>
-          </Typography>
-          <Card sx={{ display: "flex", margin: "2vh 1vh" }}>
-            <CardMedia
-              component="img"
-              sx={{ width: 365, display: { xs: "none", sm: "block" } }}
-              image={product.image}
-              alt="product-image"
-            />
-            <CardContent sx={{ flex: 1 }}>
-              <Typography component="h2" variant="h5">
-                {product.name}
-              </Typography>
-              <Typography variant="subtitle1" color="text.secondary">
-                <p>Precio:</p>
-                {product.price}€
-              </Typography>
-              <Typography variant="body2" paragraph>
-                <Typography varient="subtitle1" color="text.secondary">
-                  Descripción:
+        <>
+          <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+            <p>{product.phone}</p>
+            <p>{product.mail}</p>
+            <h2>Contacto:</h2>
+          </Modal>
+          <Grid item>
+            <Typography
+              sx={{
+                display: "flex",
+                margin: "auto 1.1vh",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Link id="back-link" to={"/animales"}>
+                Volver
+              </Link>
+            </Typography>
+            <Card sx={{ display: "flex", margin: "2vh 1vh" }}>
+              <CardMedia
+                component="img"
+                sx={{ width: 365, display: { xs: "none", sm: "block" } }}
+                image={product.image}
+                alt="product-image"
+              />
+              <CardContent sx={{ flex: 1 }}>
+                <Typography component="h2" variant="h5">
+                  {product.name}
                 </Typography>
-                {product.description}
-              </Typography>
-              <Button
-                id="contact-btn"
-                variant="contained"
-                onClick={() => setIsOpen(true)}
-              >
-                Contacto
-              </Button>
-            </CardContent>
-          </Card>
-        </Grid>
+                <Typography variant="subtitle1" color="text.secondary">
+                  <p>Precio:</p>
+                  {product.price}€
+                </Typography>
+                <Typography variant="body2" paragraph>
+                  <Typography varient="subtitle1" color="text.secondary">
+                    Descripción:
+                  </Typography>
+                  {product.description}
+                </Typography>
+                <Button
+                  id="contact-btn"
+                  variant="contained"
+                  onClick={() => setIsOpen(true)}
+                >
+                  Contacto
+                </Button>
+              </CardContent>
+            </Card>
+          </Grid>
+        </>
       )}
     </>
   );

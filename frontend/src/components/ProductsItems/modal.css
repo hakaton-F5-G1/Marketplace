@@ -1,18 +1,23 @@
-#modal-container{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+#modal-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 #modal-close-btn {
-    background-color: #b7463e;
-    font-weight: bold;
-    color: white;
-    border-radius: 50%;
-    border: none;
-    text-align: center;
-    padding: 2.5px;
-    margin: 20px;
-    width: 20px;
-    height: 20px;
+  text-align: center;
+  background-color: #b7463e;
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  padding: 2.5px;
+  margin: 20px;
+  width: 20px;
+  height: 20px;
+}
+#modal-close-btn:hover {
+  cursor: pointer;
 }

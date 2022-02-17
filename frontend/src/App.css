@@ -7,12 +7,13 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 1.2;
-  text-align: center;
-  background: linear-gradient(to top, #f5f1f1, #fff);
+    margin: 0 10px 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: center;
+    background: #f5f1f1;
 }
 
 .App {
@@ -25,12 +26,17 @@ body {
 }
 
 a {
-  text-decoration: none;
+text-decoration: none;
   color: #000;
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
+
+main {
+	flex-grow: 1;
+}
+
 @media (max-width: 880px) {
   .App {
     align-items: center;

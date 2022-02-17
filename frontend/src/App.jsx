@@ -4,6 +4,7 @@ import './App.css';
 import { Catalog } from './components/Catalog/Catalog';
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar"
+import { Footer } from "./components/Footer/Footer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductsItems } from './components/ProductsItems/ProductsItems';
 import DataService from './services/DataService';
@@ -50,7 +51,7 @@ function App() {
             element={<AddForm addProduct={addProduct} />}
           ></Route>
         </Routes>
-        {/* <button onClick={addProduct}>CLick</button> */}
+		  <Footer />
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,52 @@
+.footer {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 50px;
+}
+
+.bottomNavBar-container {
+	background-color: #fff;
+   width: 100%;
+   margin: auto;
+	border-radius: 20px;
+}
+
+.bottomNavBar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottomNavBar-links {
+	width: 100%;
+	display: flex;
+	gap: 3vw;
+}
+
+.bottomNavBar-brand {
+    text-align: left;
+}
+
+.bottomNavBar-brand a {
+    text-align: left;
+	 font-size: 1.2rem;
+}
+
+.bottomNavBar-brand p {
+    font-size: 12px;
+}
+
+.social {
+    display: flex;
+    gap: 5px;
+}
+.nav-item {
+	list-style: none;
+}
+.bottomNavBar-links .nav-link   { 
+	font-size: 0.9rem;
+}
+
+.icono-rs {
+    width: 25px;
+}
