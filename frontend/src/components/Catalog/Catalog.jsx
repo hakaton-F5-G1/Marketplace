@@ -6,18 +6,19 @@ function Catalog({ products }) {
   const [state, setState] = React.useState({ filter: "" });
   function getData(val) {
     setState({ filter: val.target.value.toLowerCase() });
-    console.warn(val.target.value);
   }
   return (
     <main>
-      <h2>Compra, regala y vende</h2>
-      <label htmlFor="producto"></label>
-      <input
-        name="producto"
-        type="text"
-        onChange={getData}
-        placeholder="Busca un producto específico por nombre, ciudad o caracteristicas"
-      />
+      <section className="head">
+        <h2>Compra, regala y vende</h2>
+        <label htmlFor="producto"></label>
+        <input
+          name="producto"
+          type="text"
+          onChange={getData}
+          placeholder="Busca un producto específico por nombre, ciudad o caracteristicas"
+        />
+      </section>
       <section className="catalog-container">
         {products.map((product) => {
           if (
@@ -38,6 +39,7 @@ function Catalog({ products }) {
           ) {
             return <Product key={product.id} product={product} />;
           }
+          return "";
         })}
       </section>
     </main>

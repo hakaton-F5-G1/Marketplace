@@ -1,61 +1,91 @@
-
-
 nav {
-    display: flex;
-	 justify-content: space-between;
-	 gap: 50px;
-    align-items: center;
-    margin: 10px;
-    border: 5px solid #f0eded;
-    background-color: #ffffff;
-	 padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  margin: 10px;
+  border: 5px solid #f0eded;
+  background-color: #ffffff;
+  padding: 15px 30px;
 }
-
-.line {
-    padding: 50px;
-    margin: -65px 0px -25px;
-    width: 100%;
-	 text-align: center;
-	 z-index: -1;
-}
-
 .logo-container {
-	display: flex;
-
+  display: flex;
 }
 
 .logo {
-    width: 100%;
-    cursor: pointer;
-	 justify-self: left;
+  width: 100%;
+  cursor: pointer;
+  justify-self: left;
 }
 
 img {
-max-width: 50vw;
-cursor: pointer;
+  max-width: 50vw;
+  cursor: pointer;
 }
 
-ul {
-	 width: 100%;
-	 display: flex;
-	 justify-content: space-between;
-	 align-items: center;
-	 list-style-type: none;
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
 }
 
-.nav-link  { 
-	font-size: 1.2rem;
+.nav-link {
+  font-size: 1.2rem;
 }
 
 .btn-publicar {
-	background-color: #b7463e;
-	border-radius: 20px;
-	padding: 10px;
+  background-color: #b7463e;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .publicar {
-	color: #fff;
-	
+  color: #fff;
 }
-
-
+.close-hamburguer {
+  display: none;
+}
+.open-hamburguer{
+	background: none;
+	border:none;
+	display: none;
+}
+.open-hamburguer img{
+	width: 1.6rem;
+}
+@media (max-width: 820px) {
+  nav {
+    width: 98vw;
+  }
+  .list {
+    position: fixed;
+    top: -10px;
+    /* left: -10px; */
+    right: 0;
+    bottom: -10px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: fit-content;
+    background-color: #000000d6;
+    padding: 0 1rem;
+  }
+  .list li a {
+    color: white;
+  }
+  .hide {
+    display: none;
+  }
+  .open-hamburguer{
+	  display: initial;
+  }
+  .close-hamburguer {
+    display: initial;
+	display: initial;
+    border: none;
+    color: white;
+    background: none;
+    font-size: 2.0rem;
+  }
+}
