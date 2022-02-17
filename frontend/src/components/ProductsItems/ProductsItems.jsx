@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from '../../services/getProductById';
+import DataService from "../../services/DataService";
 import Modal from "./modal"
 
 function ProductsItems() {
@@ -9,7 +9,7 @@ function ProductsItems() {
     const [product, setProduct] = useState();
     
     useEffect(() => {
-        getProductById(params.id)
+        DataService.getItemById(params.id)
             .then(data => setProduct(data))
     }, [params.id])
 
