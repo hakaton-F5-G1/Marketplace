@@ -1,4 +1,3 @@
-
 import logo from "../assets/logo.png";
 import line from "../assets/Line.png";
 import "./Navbar.css"
@@ -10,23 +9,26 @@ const Navbar = () => {
     <>
       <div>
         <nav>
-
-          <Link to="/">
-          <img src={logo} className="logo" alt="Website" />
-          </Link>
-          
-            <div>
+				<div className="logo-container">
+					<Link to="/">
+					<img src={logo} className="logo" alt="Website" />
+					</Link>
+         	</div>
+            
 					<ul className="list">
 							<li className="menuitem">
-								<Link className="nav-link" to="/">Productos</Link>
+								<Link className="nav-link" to="/">Home</Link>
 							</li>
-							<li className="menuitem">
-								<Link className="nav-link" to="/add">Añadir anuncio</Link>
+					  <li className="menuitem">
+						  <Link className="nav-link" to="/">Mi cuenta</Link>
+					  </li>
+							<li className="btn-publicar">
+								<Link className="nav-link publicar" to="/add">Publica tu anuncio</Link>
 							</li>
 					</ul>
-            </div>
+      
         </nav>
-        <img src={line} className="line" alt="line" />
+        
       </div>
       
       

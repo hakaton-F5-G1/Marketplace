@@ -13,7 +13,9 @@ export const AddForm = (props) => {
 		name: '',
 		description: '',
 		price: 0,
-		image: ''
+		image: '',
+		phone: '',
+		mail: ''
 	})
 
 	const handleInputChange = (event) => {
@@ -35,7 +37,7 @@ export const AddForm = (props) => {
 				<h1>Nuevo anuncio</h1>
 				<div className="form-container">
 					<form className="edit-form" onSubmit={enviarDatos} action="">
-						<div className="form-group">
+						<div className="form-group id">
 							<label htmlFor="">Id</label>
 							<input type="text"
 								className="form-control"
@@ -78,6 +80,24 @@ export const AddForm = (props) => {
 								onChange={handleInputChange}
 								name="image"
 								value={datos.image}/>
+						</div>
+
+						<div className="form-group">
+							<label htmlFor="">Teléfono</label>
+							<input type="text"
+								className="form-control"
+								onChange={handleInputChange}
+								name="phone"
+								value={datos.phone} />
+						</div>
+
+						<div className="form-group">
+							<label htmlFor="">Email</label>
+							<input type="text"
+								className="form-control"
+								onChange={handleInputChange}
+								name="mail"
+								value={datos.mail} />
 						</div>
 
 

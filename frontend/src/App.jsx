@@ -42,7 +42,7 @@ function App() {
 				<Route path="/product/:id" element={<ProductsItems />}></Route>
 				<Route path="/add" element={<AddForm addProduct={addProduct} />}></Route>
 				</Routes>
-				<button onClick={addProduct}>CLick</button>
+				{/* <button onClick={addProduct}>CLick</button> */}
 			</BrowserRouter>
 		</div>
   );
