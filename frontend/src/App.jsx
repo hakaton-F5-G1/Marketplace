@@ -1,31 +1,36 @@
-import { AddForm } from "./components/AddForm/AddForm";
-import Global from "./Global/Global";
-import "./App.css";
-import { Catalog } from "./components/Catalog/Catalog";
+
+import { AddForm } from './components/AddForm/AddForm';
+import './App.css';
+import { Catalog } from './components/Catalog/Catalog';
 import { useEffect, useState } from "react";
-import { getProducts } from "./services/getProducts";
-/* import { getProductById } from './services/getProductById'; */
 import Navbar from "./components/Navbar/Navbar"
 import { Footer } from "./components/Footer/Footer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ProductsItems } from "./components/ProductsItems/ProductsItems";
-import { Landing } from "./components/landing/landing";
+import { ProductsItems } from './components/ProductsItems/ProductsItems';
+import DataService from './services/DataService';
+
+
 function App() {
-  /* const [requiresUpdate, setRequiresUpdate] = useState(true); */
+  const [requiresUpdate, setRequiresUpdate] = useState(true); 
   const [products, setProducts] = useState([]);
-  console.log();
 
   useEffect(() => {
-    getProducts().then((data) => setProducts(data));
-  });
+    requiresUpdate?
+		DataService.getData()
+			.then(data =>
+				{
+					setProducts(data);
+					setRequiresUpdate(false);
+				})
+		:console.log("up to date");
+		 
+  },[requiresUpdate]);
 
-  const addProduct = async (product) => {
-    return fetch(Global.getProducts, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product),
-    });
-  };
+
+	const addProduct =  (product) => {
+		DataService.addNew(product)
+		return setRequiresUpdate(true)
+	}
 
   return (
     <div className="App">
