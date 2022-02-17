@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 function Product({ product }) {
   const { id, name, image, price, city } = product;
   return (
-    <Link to={`product/${id}`}>
+    <Link to={`animal/${id}`}>
       <Card sx={{ maxWidth: 345 }}>
         <div>
           <CardMedia

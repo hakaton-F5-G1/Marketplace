@@ -10,14 +10,16 @@ function Catalog({ products }) {
   }
   return (
     <main>
-      <h2>Compra, regala y vende</h2>
-      <label htmlFor="producto"></label>
-      <input
-        name="producto"
-        type="text"
-        onChange={getData}
-        placeholder="Busca un producto específico por nombre, ciudad o caracteristicas"
-      />
+      <section className="head">
+        <h2>Compra, regala y vende</h2>
+        <label htmlFor="producto"></label>
+        <input
+          name="producto"
+          type="text"
+          onChange={getData}
+          placeholder="Busca un producto específico por nombre, ciudad o caracteristicas"
+        />
+      </section>
       <section className="catalog-container">
         {products.map((product) => {
           if (
