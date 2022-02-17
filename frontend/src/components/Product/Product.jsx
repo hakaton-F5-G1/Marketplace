@@ -5,31 +5,30 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 
 function Product({ product }) {
-    const { id, name, image, price, description } = product
-  return (
-    <Link to={`product/${id}`}>
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image}
-          alt="product-img"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            {name}
-          </Typography>
-          <Typography variant="body2" color="green">
-            {price}$
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    </Link>
-  );
+    const { id, name, image, price } = product
+    return (
+        <Link to={`product/${id}`}>
+            <Card sx={{ maxWidth: 345 }}>
+                <container fixed>
+                    <CardMedia
+                        component="img"
+                        height="300"
+                        image={image}
+                        alt="product-img"
+                    />
+                </container>
+                <CardContent>
+                    <Typography gutterBottom variant="h6" component="div">
+                        {name}
+                    </Typography>
+                    <Typography variant="body2" color="green">
+                        {price}$
+                    </Typography>
+                </CardContent>
+            </Card>
+        </Link>
+    );
 }
 export { Product }
