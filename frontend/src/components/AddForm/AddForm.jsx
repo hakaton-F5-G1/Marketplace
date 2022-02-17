@@ -1,25 +1,4 @@
-/* import React from 'react';
-import { Link } from 'react-router-dom'
 
-
-
-const AddForm = ({ id, name, ammout, image, addtocart }) => {
-	return (
-		<>
-			<Link to={`/product/${id}`}>
-				<ProductWrapper id={id}>
-					<ProductImage src={image} />
-					<ProductName>{name}</ProductName>
-					<ProductButon onClick={() => addtocart()}>Add</ProductButon>
-				</ProductWrapper>
-			</Link>
-
-		</>
-	);
-};
-
-
-export default AddForm; */
 import "./addForm.css"
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -92,7 +71,7 @@ export const AddForm = (props) => {
 								className="form-control"
 								onChange={handleInputChange}
 								name="image"
-								/*value={datos.image} *//>
+								value={datos.image}/>
 						</div>
 
 
