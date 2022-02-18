@@ -1,16 +1,29 @@
 .name-price {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 #contact-btn {
-    background-color: #b7463e;
+  background-color: #b7463e;
 }
 
 * {
-    text-align: left;
+  text-align: left;
 }
 
 #back-link {
-    color: #d7756e;
-    font-style: italic;
+  color: #d7756e;
+  font-style: italic;
+}
+#containerStar {
+  border: none;
+  background: none;
+  color: #b7463e;
+  margin-left: 0.8rem;
+}
+#containerStar:hover {
+  background-color: #b7463e;
+  color: white;
+}
+.imgOnePet {
+  max-width: 250px;
 }

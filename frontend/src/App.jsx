@@ -45,7 +45,7 @@ function App() {
           ></Route>
           <Route
             path="/animales/animal/:id"
-            element={<ProductsItems />}
+            element={<ProductsItems setFavorites={setFavorites} favorites={favorites}/>}
           ></Route>
           <Route
             path="/agregar"
@@ -53,7 +53,7 @@ function App() {
           ></Route>
           <Route
             path="/favoritos"
-            element={<Favorites />}
+            element={<Favorites setFavorites={setFavorites} favorites={favorites}/>}
           ></Route>
         </Routes>
       </div>

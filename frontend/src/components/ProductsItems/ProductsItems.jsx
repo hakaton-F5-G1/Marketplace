@@ -9,13 +9,19 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DataService from "../../services/DataService";
-import Modal from "./modal"
+import Modal from "../Modal/modal"
+import "./productsitem.css"
 
-function ProductsItems() {
+function ProductsItems({setFavorites, favorites}) {
     const [isOpen, setIsOpen] = useState(false);
     const params = useParams()
     const [product, setProduct] = useState();
     
+  const addfavorite = () => {
+    const favoriteExists = fav => fav.id === product.id
+    !favorites.some(favoriteExists) && setFavorites(prevState => [...prevState, product])
+    }
+
     useEffect(() => {
         DataService.getItemById(params.id)
             .then(data => setProduct(data))
@@ -44,6 +50,7 @@ function ProductsItems() {
             </Typography>
             <Card sx={{ display: "flex", margin: "2vh 1vh" }}>
               <CardMedia
+                className="imgOnePet"
                 component="img"
                 sx={{ width: 365, display: { xs: "none", sm: "block" } }}
                 image={product.image}
@@ -69,6 +76,9 @@ function ProductsItems() {
                   onClick={() => setIsOpen(true)}
                 >
                   Contacto
+                </Button>
+                <Button id="containerStar" onClick={addfavorite}>
+                 Agregar Favorito
                 </Button>
               </CardContent>
             </Card>
