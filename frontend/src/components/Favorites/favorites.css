@@ -1,0 +1,19 @@
+.container-favorites {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  justify-items: center;
+}
+.container-favorite {
+  position: relative;
+}
+.delete-favorite {
+  position: absolute;
+  border: none;
+  background: none;
+  color: #b7463e;
+  font-size: 2rem;
+  border-radius: 50%;
+  top: -20px;
+  right: -7px;
+}

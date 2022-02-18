@@ -13,8 +13,10 @@ function Favorites({ favorites, setFavorites }) {
                 <div className="container-favorites">
                     {favorites.map((pet, i) => (
                         <>
-                            <Product product={pet} key={i} />
-                            <button onClick={() => {onDelete(pet.id)}}>Delete</button>
+                            <div className="container-favorite">
+                                <Product product={pet} key={i} />
+                                <button className="delete-favorite" onClick={() => { onDelete(pet.id) }}>X</button>
+                            </div>
                         </>
                     ))}
                 </div>
