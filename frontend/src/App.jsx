@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer/Footer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductsItems } from './components/ProductsItems/ProductsItems';
 import DataService from './services/DataService';
+import { Landing } from './components/landing/landing';
 
 
 function App() {

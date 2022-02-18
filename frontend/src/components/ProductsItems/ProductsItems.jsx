@@ -58,10 +58,10 @@ function ProductsItems() {
                   {product.price}€
                 </Typography>
                 <Typography variant="body2" paragraph>
-                  <Typography varient="subtitle1" color="text.secondary">
+                  <Typography varient="subtitle1" color="text.secondary" >
                     Descripción:
                   </Typography>
-                  {product.description}
+                   {product.description}
                 </Typography>
                 <Button
                   id="contact-btn"

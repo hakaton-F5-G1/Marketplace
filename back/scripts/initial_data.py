@@ -1,6 +1,7 @@
 import sys
 sys.path.insert(0, "")
-from src.domain.product import ProductRepository, Product
+from src.repository.Sqlite3ProductRepositoryImpl import Sqlite3ProductRepositoryImpl
+from src.domain.product import Product
 
 database_path = "data/products-list.db"
 
@@ -37,7 +38,7 @@ doberman_adopción = Product(
 )
 
 
-product_repository = ProductRepository(database_path)
+product_repository = Sqlite3ProductRepositoryImpl(database_path)
 product_repository.save(bulldog_regalo_reikiavik)
 product_repository.save(caniches_pedigree)
 product_repository.save(doberman_adopción)
