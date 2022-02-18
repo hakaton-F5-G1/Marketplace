@@ -32,9 +32,8 @@ h2 {
   cursor: pointer;
 } */
 .pbli {
-  position: absolute;
-  right: -10px;
-  height: 72%;
+  width: 100%;
+  object-fit: cover;
 }
 .busca-un-perro img {
   width: 100%;
@@ -51,4 +50,15 @@ h2 {
 .busca-un-perro button {
   width: 100%;
   height: 0%;
+}
+
+.banner-enlazado {
+  display: block;
+  width: 100%;  
+}
+
+.banner-enlazado img {
+  display: block;
+  width: 100%;
+  max-width: none !important;
 }
